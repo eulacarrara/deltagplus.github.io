@@ -12,4 +12,5 @@ Zootecnia | Melhoramento genético animal
 - [Resolução das equações de modelos mistos com grupos de pais desconhecidos (UPG)](MME_UPG.html)  
 
 ### Tutoriais programa BLUPF90  
-- [Youtube](https://www.youtube.com/@deltagplus)  
+- [Youtube](https://www.youtube.com/@deltagplus)
+  
