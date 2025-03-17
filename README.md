@@ -9,8 +9,8 @@ Zootecnia | Melhoramento genético animal
 - ResearchGate: [researchgate.net](http://www.researchgate.net/profile/Eula-Carrara)  
 - Linkedin: [linkedin.com](https://www.linkedin.com/in/eulacarrara/)  
   
-#### Tutoriais em R  
+### Tutoriais em R  
 - [Resolução das equações de modelos mistos com grupos de pais desconhecidos (UPG)](MME_UPG.html)
   
-#### Tutoriais programa BLUPF90  
+### Tutoriais programa BLUPF90  
 - [Youtube](https://www.youtube.com/@deltagplus)
