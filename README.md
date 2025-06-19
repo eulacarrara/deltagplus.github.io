@@ -2,14 +2,16 @@
 
 Zootecnia | Melhoramento genético animal  
 
+#### Aulas gratuitas: [Delta G Plus - tutoriais para avaliação genética animal](https://www.youtube.com/@deltagplus)  
+  
+<br>
+  
 - Permanent link: [eulacarrara.github.io](https://eulacarrara.github.io)
 - Github account: [github.com/eulacarrara](https://github.com/eulacarrara/)
 - Lattes: [lattes.cnpq.br](http://lattes.cnpq.br/5199216087123978)
 - ResearchGate: [researchgate.net](http://www.researchgate.net/profile/Eula-Carrara)
-- Linkedin: [linkedin.com](https://www.linkedin.com/in/eulacarrara/)
-
-- [Delta G Plus - tutoriais para avaliação genética animal](https://www.youtube.com/@deltagplus)
-  
+- Linkedin: [linkedin.com](https://www.linkedin.com/in/eulacarrara/)  
+    
 <br>
 
 ## Conteúdo em Português (Brasil)  
