@@ -1,6 +1,6 @@
 # Eula R. Carrara  
 
-Zootecnia | Melhoramento genético animal  
+##### Zootecnia | Melhoramento genético animal  
 
 #### Aulas gratuitas: [Delta G Plus - tutoriais para avaliação genética animal](https://www.youtube.com/@deltagplus)
 
@@ -16,7 +16,7 @@ Zootecnia | Melhoramento genético animal
 
 ## Conteúdo em Português (Brasil)  
 
-### Resoluções à mão - vídeoaulas
+### * Resoluções à mão - vídeoaulas no YouTube
 - [Modelo animal simples, com um efeito fixo + efeito de animal](https://www.youtube.com/watch?v=-pzh1s1-AqA)
 - [Modelo de repetibilidade](https://www.youtube.com/watch?v=6607tWscA94)
 - Modelo com efeitos maternos (em breve)
@@ -26,8 +26,7 @@ Zootecnia | Melhoramento genético animal
 - Predição genômica (em breve)
 - Estudos de associação genômica ampla - GWAS (em breve)  
   
-### Tutoriais e resoluções em R - vídeoaulas e scripts
-- [Resolução das equações de modelos mistos com grupos de pais desconhecidos (UPG)](MME_UPG.html)
+### * Tutoriais e resoluções em R - vídeoaulas no YouTube
 - [Modelo animal simples, com um efeito fixo + efeito de animal](https://www.youtube.com/watch?v=dQatiIB9jL4)
 - [Modelo de repetibilidade](https://www.youtube.com/watch?v=62c08hO4Bt4)
 - Modelo com efeitos maternos (em breve)
@@ -36,14 +35,17 @@ Zootecnia | Melhoramento genético animal
 - Modelo de regressão aleatória e normas de reação (em breve)
 - Predição genômica (em breve)
 - Estudos de associação genômica ampla - GWAS (em breve)  
+
+### * Scripts em R (sem vídeo explicativo)
+- [Resolução das equações de modelos mistos com grupos de pais desconhecidos (UPG)](MME_UPG.html)
   
-### Tutoriais e resoluções nos programas BLUPF90 - vídeoaulas
+### * Tutoriais e resoluções nos programas BLUPF90 - vídeoaulas no YouTube
 - [Por onde começar? Uma tour pelo site](https://www.youtube.com/watch?v=ypVWmCrXcSU)
 - [Como rodar/executar?](https://www.youtube.com/watch?v=dw7axvZJ-Nw)
 - [Análises triviais de modelos fixos](https://www.youtube.com/watch?v=wKRbDOGsdVM)
 - [Análises triviais de modelos mistos](https://www.youtube.com/watch?v=wHdE-2cEwow)
 - [Modelo animal simples, com um efeito fixo + efeito de animal](https://www.youtube.com/watch?v=O9TDhq9p-Cg)
-- Modelo de repetibilidade (em breve)
+- [Modelo de repetibilidade](https://www.youtube.com/watch?v=ByYlVy75d7A)
 - Modelo com efeitos maternos (em breve)
 - Modelo animal multicaracteristico (em breve)
 - Modelo de repetibilidade multicaracteristico com efeitos maternos (em breve)
