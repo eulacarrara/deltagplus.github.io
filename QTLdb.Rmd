@@ -1,0 +1,61 @@
+
+---
+title: Buscador de características relacionadas a uma lista de genes no Cattle QTLdb
+author: "Eula Carrara (eulacarrara@gmail.com)"
+date: "11-Aug-2025"
+---
+
+Link para o [CattleQTLdb](https://www.animalgenome.org/cgi-bin/QTLdb/BT/index) 
+  
+<br>
+  
+**Pacotes R exigidos:** rvest, dplyr, gdata, DT  
+
+```{r, echo=TRUE, results='hide', message=FALSE, warning=FALSE}
+pacotes <- c("rvest", "dplyr", "gdata", "DT")
+
+for (p in pacotes) {
+  if (!requireNamespace(p, quietly = TRUE)) {
+    install.packages(p)
+  }
+  library(p, character.only = TRUE)
+}
+```
+
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+
+# LISTA DE GENES
+genes <- c("DGAT1", "NPFFR2")
+
+get_traits <- function(gene) {
+  url <- paste0(
+    "https://www.animalgenome.org/cgi-bin/QTLdb/BT/genesrch?gwords=",
+    gene,
+    "&vopt=tcentr&submit=go"
+  )
+  
+  page <- read_html(url)
+  
+  traits <- page %>%
+    html_nodes(xpath = "//td[@class='s' and text()='Trait name:']/following-sibling::td[@class='t']") %>%
+    html_text(trim = TRUE)
+  
+  if (length(traits) == 0) traits <- NA
+  
+  data.frame(Gene = gene, Trait = traits, stringsAsFactors = FALSE)
+}
+
+result <- do.call(rbind, lapply(genes, get_traits))
+
+# Salvar em TXT
+write.fwf(result, file = 'caracteristicas-genes.txt', rownames = FALSE, colnames = TRUE, quote = FALSE,
+          sep = "    ", justify = 'left')
+
+# Tabela interativa no HTML
+datatable(result, options = list(pageLength = 10),
+          caption = "Características encontradas para os genes pesquisados")
+
+```
+
+Enjoy it!
