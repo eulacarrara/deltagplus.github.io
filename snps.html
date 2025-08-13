@@ -1,0 +1,350 @@
+
+<HTML>
+<HEAD><TITLE>Cattle QTL Database</title>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="/default/style.css" MEDIA=screen>
+<STYLE TYPE="text/css"><!--
+TH   { text-align:left; padding:9 18px; background-color:#ced;font-weight:500; }
+TD   { font-size:10pt; color:navy; padding:1 3px;
+       font-family:sans-serif,arial,verdana,helvetica; }
+TD.l { vertical-align:top; }
+H2   { font-weight:normal; font-size:20pt; }
+A    { text-decoration:none; }
+B.g  { color:#d32; }
+LI   { margin-bottom:6px; }
+LI.b { margin-bottom:2px; }
+SPAN.v { color:#068; }
+SPAN.p { color:#933; }
+SPAN.c { color:#360; }
+TEXTAREA { padding:2 6px; }
+-->
+</STYLE>
+</HEAD>
+<BODY bgcolor="#ffffff" text="#0000A0" link="#0000FF" vlink="#0069E1" alink="008840" rightmargin=25>
+<TABLE border=0 cellspacing=0 cellpadding=0 style='width:98%;margin:1px'>
+<TR style='background:url("/QTLdb/images/titlebar_bg.jpg")'>
+<TD style="text-align:left;padding:6px"><a href="/QTLdb/cattle"><img style='border-style:solid;border-color:#fff;border-width:1px 5px 1px 5px;opacity:0.9' src="/QTLdb/images/cattleQTLdbsm.gif"></a>
+</TD><TD style='padding:3px 0;text-align:right'>
+<FORM NAME=highlight style="margin:0px;">
+<TABLE border=0 cellspacing=0 cellpadding=0 align=right>
+<TR>
+<TD onmouseover="this.style.background='yellow'" onmouseout="this.style.background=''" style="padding:4px;">
+<INPUT TYPE="button" VALUE="Browse" onClick="location.href='browse'">
+</TD><TD onmouseover="this.style.background='yellow'" onmouseout="this.style.background=''" style="padding:4px;">
+<INPUT TYPE="button" VALUE="Search" onClick="location.href='search'">
+</TD><TD onmouseover="this.style.background='yellow'" onmouseout="this.style.background=''" style="padding:4px;">
+<INPUT TYPE="button" VALUE="View Maps" onClick="location.href='viewmap'">
+</TD><TD onmouseover="this.style.background='yellow'" onmouseout="this.style.background=''" style="padding:4px;">
+<INPUT TYPE="button" VALUE="F A Q" onClick="location.href='/QTLdb/faq'">
+</TD></TR>
+</TABLE>
+</FORM>
+</TD><TD style='padding:1px;text-align:right;width:110px'>
+<div style="line-height:1.2em;padding:1px;margin:0;border-radius:0.3em 0.3em;border:2px groove #8ea0ff;width:fit-content;padding:2 4px;text-align:center;float:right;background-image:url('/icons/fad-yellow.gif');border-radius:0.2em 0.2em;">
+ <a href="/QTLdb/release/56"><span style="font-family:tahoma;color:#a40; font-weight:700;">Release 56</span><BR>
+<span style="font-family:arial narrow;color:#620;font-weight:400;">(Apr 24, 2025)</span></a></div>
+</TD></TR>
+</TABLE>
+ 
+<table border=0 cellpadding=0 cellspacing=0 width=800 style="margin:4 0px;">
+<tr><td valign=top>
+<h2>Query by SNPs</h2>
+<FORM name="getin" METHOD="post" ACTION="srchsnp">
+<TABLE border=0 style="margin:20px;border:0px solid #987;padding:10 18px;">
+<TR><TD colspan='2' style='vertical-align:top'>Copy/Paste SNP rs IDs to search for:</TD></TR>
+<TR><TD><TEXTAREA name="snprs" style='width:200px;height:210px' placeholder='One or more SNP "rs" numbers separated with space, comma, tab or line breaks.  A SNP rs number must start with "rs"'>rs108984194
+rs109234250
+</TEXTAREA>
+</TD><TD style='vertical-align:bottom;padding-left:16px;color:#999'>
+ Filters: (developing)<br>
+ <LI class='b'>Having linked gene<br>
+ <LI class='b'>Genome Build opt<br>
+ <LI class='b'>Single trait<br>
+ <LI class='b'>Multiple traits<br>
+ <INPUT type='submit' name='submit' style='margin:6px' value="go">
+</TD></TR>
+</TABLE>
+</FORM>
+  <h2>Query results:</h2>
+    <TABLE border='1' style='border-collapse:collapse;margin:5 10px;width:780px'>
+    <TR><TH style='font-size:16pt'>SNP</TH>
+        <TH style='font-size:12pt'>Associated Traits (in <b style='color:blue'>blue</b>) and/or Genes (in <b style='color:red'>red</b>) <br>( Traint ontology ( <img style='height:15px;margin-bottom:-3px' src='/icons/small/ontology.png'> ) and correlation data ( <img style='margin-bottom:-5px' src='/icons/small/hand.right.png'> ) are included when they exist )</TH></TR>
+<TR style='background-color:#f9f9f5'><TD class='l'>rs108984194</TD><TD>
+<UL style='padding:2 10 0 20px'>
+<LI><a href="qtrait?trait_ID=1073"><B>Calving ease</B></a> (CALEASE): {Association} Chr.<a href="qdetails?QTL_ID=313976">18:56,106,283-56,106,287</a>; [REF:<a href="qabstract?PUBMED_ID=35565554">35565554</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: parturition trait</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1073&limit=60&vrange=all&species=cattle">Calving ease [CorrID:39569]</a></div>
+<LI><a href="qtrait?trait_ID=1075"><B>Conception rate</B></a> (CONCRATE): {Association} Chr.<a href="qdetails?QTL_ID=107174">18:56,106,265-56,106,305</a>; [REF:<a href="qabstract?PUBMED_ID=27209127">27209127</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: fertility trait</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1075&limit=60&vrange=all&species=cattle">Conception rate [CorrID:65022]</a></div>
+<LI><a href="qtrait?trait_ID=1067"><B>Length of productive life</B></a> (PL): {Association} Chr.<a href="qdetails?QTL_ID=123609">18:56,106,265-56,106,305</a>; [REF:<a href="qabstract?PUBMED_ID=27889128">27889128</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: life span trait</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1067&limit=60&vrange=all&species=cattle">Length of productive life [CorrID:33343]</a></div>
+<LI><a href="qtrait?trait_ID=1099"><B>Milking speed</B></a> (MSPD): {Association} Chr.<a href="qdetails?QTL_ID=158195">18:56,106,265-56,106,305</a>; [REF:<a href="qabstract?PUBMED_ID=29705414">29705414</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk flow trait</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1099&limit=60&vrange=all&species=cattle">Milking speed [CorrID:35841]</a></div>
+<LI><a href="qtrait?trait_ID=1865"><B>Sole ulcer</B></a> (SULC): {Association} Chr.<a href="qdetails?QTL_ID=286537">18:56,106,283-56,106,287</a>; [REF:<a href="qabstract?PUBMED_ID=37939841">37939841</a>] 
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1865&limit=60&vrange=all&species=cattle">Sole ulcer [CorrID:56840]</a></div>
+<LI><a href="qtrait?trait_ID=1153"><B>Stillbirth</B></a> (SB): {Association} Chr.<a href="qdetails?QTL_ID=314034">18:56,106,283-56,106,287</a>; [REF:<a href="qabstract?PUBMED_ID=35565554">35565554</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: stillborn offspring quantity</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1153&limit=60&vrange=all&species=cattle">Stillbirth [CorrID:58385]</a></div>
+
+
+</UL>
+</TD></TR>
+<TR style='background-color:#f0f0fa'><TD class='l'>rs109234250</TD><TD>
+<UL style='padding:2 10 0 20px'>
+<LI><a href="qtrait?trait_ID=1067"><B>Length of productive life</B></a> (PL): {Association} Chr.<a href="qdetails?QTL_ID=31669">14:610,999-611,039</a>; [REF:<a href="qabstract?PUBMED_ID=24796806">24796806</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: life span trait</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1067&limit=60&vrange=all&species=cattle">Length of productive life [CorrID:33343]</a></div>
+<LI><a href="qtrait?trait_ID=1640"><B>Milk alpha-S1-casein percentage</B></a> (MAS1CP): {QTL} Chr.<a href="qdetails?QTL_ID=130532">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk alpha-S1-casein amount</span>; <span class='p'>LPT: milk alpha-S1-casein content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1640&limit=60&vrange=all&species=cattle">Milk alpha-S1-casein percentage [CorrID:39736]</a></div>
+<LI><a href="qtrait?trait_ID=1641"><B>Milk alpha-S2-casein percentage</B></a> (MAS2CP): {QTL} Chr.<a href="qdetails?QTL_ID=130533">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk alpha-S2-casein amount</span>; <span class='p'>LPT: milk alpha-S2-casein content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1641&limit=60&vrange=all&species=cattle">Milk alpha-S2-casein percentage [CorrID:39734]</a></div>
+<LI><a href="qtrait?trait_ID=1385"><B>Milk alpha-lactalbumin content</B></a> (MALACT): {QTL} Chr.<a href="qdetails?QTL_ID=130544">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk alpha-lactalbumin amount</span>; <span class='p'>LPT: egg albumen flavor trait</span>; <span class='c'>CMO: milk alpha-lactalbumin content</span>; </div>
+<LI><a href="qtrait?trait_ID=1613"><B>Milk calcium content</B></a> (MCA): {QTL} Chr.<a href="qdetails?QTL_ID=130535">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk calcium amount</span>; <span class='p'>LPT: milk calcium content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1613&limit=60&vrange=all&species=cattle">Milk calcium content [CorrID:39286]</a></div>
+<LI><a href="qtrait?trait_ID=1250"><B>Milk capric acid content</B></a> (MFA-C10:0): {QTL} Chr.<a href="qdetails?QTL_ID=130518">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C10:0 amount</span>; <span class='p'>LPT: milk fatty acid C10:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1250&limit=60&vrange=all&species=cattle">Milk capric acid content [CorrID:40374]</a></div>
+<LI><a href="qtrait?trait_ID=1248"><B>Milk caproic acid content</B></a> (MFA-C6:0): {QTL} Chr.<a href="qdetails?QTL_ID=130516">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C6:0 amount</span>; <span class='p'>LPT: milk fatty acid C6:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1248&limit=60&vrange=all&species=cattle">Milk caproic acid content [CorrID:40379]</a></div>
+<LI><a href="qtrait?trait_ID=1249"><B>Milk caprylic acid content</B></a> (MFA-C8:0): {QTL} Chr.<a href="qdetails?QTL_ID=130517">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C8:0 amount</span>; <span class='p'>LPT: milk fatty acid C8:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1249&limit=60&vrange=all&species=cattle">Milk caprylic acid content [CorrID:40378]</a></div>
+<LI><a href="qtrait?trait_ID=1257"><B>Milk conjugated linoleic acid content</B></a> (CLAC18:2): {QTL} Chr.<a href="qdetails?QTL_ID=130507">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk conjugated linoleic acid amount</span>; <span class='p'>LPT: milk conjugated linoleic acid content</span>; </div>
+<LI><a href="qtrait?trait_ID=1129"><B>Milk energy yield</B></a> (EY): {QTL} Chr.<a href="qdetails?QTL_ID=126985">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26142855">26142855</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='p'>LPT: milk energy yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1129&limit=60&vrange=all&species=cattle">Milk energy yield [CorrID:31944]</a></div>
+<LI><a href="qtrait?trait_ID=1806"><B>Milk fat content</B></a> (MFATC): {Association} Chr.<a href="qdetails?QTL_ID=167589">14:610,999-611,039</a>; [REF:<a href="qabstract?PUBMED_ID=30459810">30459810</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fat amount</span>; <span class='p'>LPT: milk fat content</span>; <span class='c'>CMO: milk fat content</span>; </div>
+<LI><a href="qtrait?trait_ID=1037"><B>Milk fat percentage</B></a> (FP): {Association} Chr.<a href="qdetails?QTL_ID=214837">14:610,999-611,039</a>; [REF:<a href="qabstract?PUBMED_ID=32998688">32998688</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fat amount</span>; <span class='p'>LPT: milk fat content</span>; <span class='c'>CMO: milk fat percentage</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1037&limit=60&vrange=all&species=cattle">Milk fat percentage [CorrID:32741]</a></div>
+<LI><a href="qtrait?trait_ID=1039"><B>Milk fat yield</B></a> (FY): {Association} Chr.<a href="qdetails?QTL_ID=223336">14:611,017-611,021</a>; [REF:<a href="qabstract?PUBMED_ID=34068321">34068321</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk total fat amount</span>; <span class='p'>LPT: milk fat yield</span>; <span class='c'>CMO: milk fat yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1039&limit=60&vrange=all&species=cattle">Milk fat yield [CorrID:32889]</a></div>
+<LI><a href="qtrait?trait_ID=1419"><B>Milk kappa-casein percentage</B></a> (MKCASP): {QTL} Chr.<a href="qdetails?QTL_ID=130534">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk kappa-casein amount</span>; <span class='p'>LPT: milk kappa-casein content</span>; <span class='c'>CMO: milk kappa-casein percentage</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1419&limit=60&vrange=all&species=cattle">Milk kappa-casein percentage [CorrID:39737]</a></div>
+<LI><a href="qtrait?trait_ID=1378"><B>Milk lactose content</B></a> (MLC): {QTL} Chr.<a href="qdetails?QTL_ID=130484">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk lactose amount</span>; <span class='p'>LPT: milk lactose content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1378&limit=60&vrange=all&species=cattle">Milk lactose content [CorrID:39279]</a></div>
+<LI><a href="qtrait?trait_ID=1505"><B>Milk lactose yield</B></a> (LACTYD): {Association} Chr.<a href="qdetails?QTL_ID=147665">14:610,999-611,039</a>; [REF:<a href="qabstract?PUBMED_ID=29246110">29246110</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk lactose amount</span>; <span class='p'>LPT: milk lactose yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1505&limit=60&vrange=all&species=cattle">Milk lactose yield [CorrID:32930]</a></div>
+<LI><a href="qtrait?trait_ID=1251"><B>Milk lauric acid content</B></a> (MFA-C12:0): {QTL} Chr.<a href="qdetails?QTL_ID=130519">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C12:0 amount</span>; <span class='p'>LPT: milk fatty acid C12:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1251&limit=60&vrange=all&species=cattle">Milk lauric acid content [CorrID:40364]</a></div>
+<LI><a href="qtrait?trait_ID=1256"><B>Milk linoleic acid content</B></a> (MFA-C18:2): {QTL} Chr.<a href="qdetails?QTL_ID=130530">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid cis-9,cis-12-C18:2 amount</span>; <span class='p'>LPT: milk fatty acid cis-9,cis-12-C18:2 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1256&limit=60&vrange=all&species=cattle">Milk linoleic acid content [CorrID:48561]</a></div>
+<LI><a href="qtrait?trait_ID=1574"><B>Milk linolenic acid content</B></a> (MFA-C18:3n3): {QTL} Chr.<a href="qdetails?QTL_ID=130531">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C18:3(n-3) amount</span>; <span class='p'>LPT: milk fatty acid C18:3(n-3) content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1574&limit=60&vrange=all&species=cattle">Milk linolenic acid content [CorrID:48559]</a></div>
+<LI><a href="qtrait?trait_ID=1643"><B>Milk margaric acid content</B></a> (MFA-C17:0): {QTL} Chr.<a href="qdetails?QTL_ID=130524">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C17:0 amount</span>; <span class='p'>LPT: milk fatty acid C17:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1643&limit=60&vrange=all&species=cattle">Milk margaric acid content [CorrID:40369]</a></div>
+<LI><a href="qtrait?trait_ID=1252"><B>Milk myristic acid content</B></a> (MFA-C14:0): {QTL} Chr.<a href="qdetails?QTL_ID=130520">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C14:0 amount</span>; <span class='p'>LPT: milk fatty acid C14:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1252&limit=60&vrange=all&species=cattle">Milk myristic acid content [CorrID:40373]</a></div>
+<LI><a href="qtrait?trait_ID=1302"><B>Milk myristoleic acid content</B></a> (MFA-C14:1): {QTL} Chr.<a href="qdetails?QTL_ID=130525">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid cis-9-C14:1 amount</span>; <span class='p'>LPT: milk fatty acid cis-9-C14:1 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1302&limit=60&vrange=all&species=cattle">Milk myristoleic acid content [CorrID:48343]</a></div>
+<LI><a href="qtrait?trait_ID=1255"><B>Milk oleic acid content</B></a> (MFA-C18:1 ): {QTL} Chr.<a href="qdetails?QTL_ID=130527">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid cis-9-C18:1 amount</span>; <span class='p'>LPT: milk fatty acid cis-9-C18:1 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1255&limit=60&vrange=all&species=cattle">Milk oleic acid content [CorrID:40372]</a></div>
+<LI><a href="qtrait?trait_ID=1323"><B>Milk palmitic acid content</B></a> (MFA-C16:0): {QTL} Chr.<a href="qdetails?QTL_ID=130521">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C16:0 amount</span>; <span class='p'>LPT: milk fatty acid C16:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1323&limit=60&vrange=all&species=cattle">Milk palmitic acid content [CorrID:40377]</a></div>
+<LI><a href="qtrait?trait_ID=1301"><B>Milk palmitoleic acid content</B></a> (MFA-C16:1): {QTL} Chr.<a href="qdetails?QTL_ID=130526">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid cis-9-C16:1 amount</span>; <span class='p'>LPT: milk fatty acid cis-9-C16:1 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1301&limit=60&vrange=all&species=cattle">Milk palmitoleic acid content [CorrID:48341]</a></div>
+<LI><a href="qtrait?trait_ID=1326"><B>Milk pentadecylic acid content</B></a> (MFA-C15:0): {QTL} Chr.<a href="qdetails?QTL_ID=130523">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C15:0 amount</span>; <span class='p'>LPT: milk fatty acid C15:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1326&limit=60&vrange=all&species=cattle">Milk pentadecylic acid content [CorrID:48330]</a></div>
+<LI><a href="qtrait?trait_ID=1615"><B>Milk phosphorus content</B></a> (MPH): {QTL} Chr.<a href="qdetails?QTL_ID=130538">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk phosphorus amount</span>; <span class='p'>LPT: milk phosphorus content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1615&limit=60&vrange=all&species=cattle">Milk phosphorus content [CorrID:39279]</a></div>
+<LI><a href="qtrait?trait_ID=1614"><B>Milk potassium content</B></a> (MK): {QTL} Chr.<a href="qdetails?QTL_ID=130537">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk potassium amount</span>; <span class='p'>LPT: milk potassium content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1614&limit=60&vrange=all&species=cattle">Milk potassium content [CorrID:39282]</a></div>
+<LI><a href="qtrait?trait_ID=1041"><B>Milk protein percentage</B></a> (PP): {Association} Chr.<a href="qdetails?QTL_ID=147672">14:610,999-611,039</a>; [REF:<a href="qabstract?PUBMED_ID=29246110">29246110</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk protein amount</span>; <span class='p'>LPT: milk protein content</span>; <span class='c'>CMO: milk protein percentage</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1041&limit=60&vrange=all&species=cattle">Milk protein percentage [CorrID:32738]</a></div>
+<LI><a href="qtrait?trait_ID=1042"><B>Milk protein yield</B></a> (PY): {Association} Chr.<a href="qdetails?QTL_ID=147692">14:610,999-611,039</a>; [REF:<a href="qabstract?PUBMED_ID=29246110">29246110</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk protein amount</span>; <span class='p'>LPT: milk protein yield</span>; <span class='c'>CMO: milk protein yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1042&limit=60&vrange=all&species=cattle">Milk protein yield [CorrID:32886]</a></div>
+<LI><a href="qtrait?trait_ID=1620"><B>Milk selenium content</B></a> (MSE): {QTL} Chr.<a href="qdetails?QTL_ID=130536">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk selenium amount</span>; <span class='p'>LPT: milk selenium content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1620&limit=60&vrange=all&species=cattle">Milk selenium content [CorrID:39295]</a></div>
+<LI><a href="qtrait?trait_ID=1254"><B>Milk trans-vaccenic acid content</B></a> (MFA-C18:1t): {QTL} Chr.<a href="qdetails?QTL_ID=130529">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid trans-11-C18:1 amount</span>; <span class='p'>LPT: milk fatty acid trans-11-C18:1 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1254&limit=60&vrange=all&species=cattle">Milk trans-vaccenic acid content [CorrID:48844]</a></div>
+<LI><a href="qtrait?trait_ID=1573"><B>Milk tridecylic acid content</B></a> (MFA-C13:0): {QTL} Chr.<a href="qdetails?QTL_ID=130522">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='p'>LPT: milk fatty acid C13:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1573&limit=60&vrange=all&species=cattle">Milk tridecylic acid content [CorrID:48331]</a></div>
+<LI><a href="qtrait?trait_ID=1044"><B>Milk yield</B></a> (MY): {Association} Chr.<a href="qdetails?QTL_ID=147688">14:610,999-611,039</a>; [REF:<a href="qabstract?PUBMED_ID=29246110">29246110</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk amount</span>; <span class='c'>CMO: milk yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1044&limit=60&vrange=all&species=cattle">Milk yield [CorrID:31937]</a></div>
+<LI><a href="qtrait?trait_ID=1621"><B>Milk zinc content</B></a> (MZN): {QTL} Chr.<a href="qdetails?QTL_ID=130539">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk zinc amount</span>; <span class='p'>LPT: milk zinc content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1621&limit=60&vrange=all&species=cattle">Milk zinc content [CorrID:39283]</a></div>
+<LI><a href="qtrait?trait_ID=1004"><B>Somatic cell count</B></a> (SCC): {Association} Chr.<a href="qdetails?QTL_ID=161541">14:610,999-611,039</a>; [REF:<a href="qabstract?PUBMED_ID=27534682">27534682</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk somatic cell quantity</span>; <span class='p'>LPT: milk somatic cell count</span>; <span class='c'>CMO: milk somatic cell count</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1004&limit=60&vrange=all&species=cattle">Somatic cell count [CorrID:38327]</a></div>
+
+<LI><B class='g'>DGAT1</B>: Diacylglycerol O-acyltransferase 1 [REF:<a href="qabstract?PUBMED_ID=34068321">34068321</a>]; 
+</UL>
+</TD></TR>
+<TR style='background-color:#f9f9f5'><TD class='l'>rs109326954</TD><TD>
+<UL style='padding:2 10 0 20px'>
+<LI><a href="qtrait?trait_ID=1640"><B>Milk alpha-S1-casein percentage</B></a> (MAS1CP): {QTL} Chr.<a href="qdetails?QTL_ID=130532">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk alpha-S1-casein amount</span>; <span class='p'>LPT: milk alpha-S1-casein content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1640&limit=60&vrange=all&species=cattle">Milk alpha-S1-casein percentage [CorrID:39736]</a></div>
+<LI><a href="qtrait?trait_ID=1641"><B>Milk alpha-S2-casein percentage</B></a> (MAS2CP): {QTL} Chr.<a href="qdetails?QTL_ID=130533">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk alpha-S2-casein amount</span>; <span class='p'>LPT: milk alpha-S2-casein content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1641&limit=60&vrange=all&species=cattle">Milk alpha-S2-casein percentage [CorrID:39734]</a></div>
+<LI><a href="qtrait?trait_ID=1385"><B>Milk alpha-lactalbumin content</B></a> (MALACT): {QTL} Chr.<a href="qdetails?QTL_ID=130544">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk alpha-lactalbumin amount</span>; <span class='p'>LPT: egg albumen flavor trait</span>; <span class='c'>CMO: milk alpha-lactalbumin content</span>; </div>
+<LI><a href="qtrait?trait_ID=1613"><B>Milk calcium content</B></a> (MCA): {QTL} Chr.<a href="qdetails?QTL_ID=130535">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk calcium amount</span>; <span class='p'>LPT: milk calcium content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1613&limit=60&vrange=all&species=cattle">Milk calcium content [CorrID:39286]</a></div>
+<LI><a href="qtrait?trait_ID=1250"><B>Milk capric acid content</B></a> (MFA-C10:0): {QTL} Chr.<a href="qdetails?QTL_ID=130518">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C10:0 amount</span>; <span class='p'>LPT: milk fatty acid C10:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1250&limit=60&vrange=all&species=cattle">Milk capric acid content [CorrID:40374]</a></div>
+<LI><a href="qtrait?trait_ID=1248"><B>Milk caproic acid content</B></a> (MFA-C6:0): {QTL} Chr.<a href="qdetails?QTL_ID=130516">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C6:0 amount</span>; <span class='p'>LPT: milk fatty acid C6:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1248&limit=60&vrange=all&species=cattle">Milk caproic acid content [CorrID:40379]</a></div>
+<LI><a href="qtrait?trait_ID=1249"><B>Milk caprylic acid content</B></a> (MFA-C8:0): {QTL} Chr.<a href="qdetails?QTL_ID=130517">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C8:0 amount</span>; <span class='p'>LPT: milk fatty acid C8:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1249&limit=60&vrange=all&species=cattle">Milk caprylic acid content [CorrID:40378]</a></div>
+<LI><a href="qtrait?trait_ID=1257"><B>Milk conjugated linoleic acid content</B></a> (CLAC18:2): {QTL} Chr.<a href="qdetails?QTL_ID=130507">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk conjugated linoleic acid amount</span>; <span class='p'>LPT: milk conjugated linoleic acid content</span>; </div>
+<LI><a href="qtrait?trait_ID=1129"><B>Milk energy yield</B></a> (EY): {QTL} Chr.<a href="qdetails?QTL_ID=126985">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26142855">26142855</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='p'>LPT: milk energy yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1129&limit=60&vrange=all&species=cattle">Milk energy yield [CorrID:31944]</a></div>
+<LI><a href="qtrait?trait_ID=1037"><B>Milk fat percentage</B></a> (FP): {QTL} Chr.<a href="qdetails?QTL_ID=139269">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=28819221">28819221</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fat amount</span>; <span class='p'>LPT: milk fat content</span>; <span class='c'>CMO: milk fat percentage</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1037&limit=60&vrange=all&species=cattle">Milk fat percentage [CorrID:32741]</a></div>
+<LI><a href="qtrait?trait_ID=1039"><B>Milk fat yield</B></a> (FY): {QTL} Chr.<a href="qdetails?QTL_ID=130541">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk total fat amount</span>; <span class='p'>LPT: milk fat yield</span>; <span class='c'>CMO: milk fat yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1039&limit=60&vrange=all&species=cattle">Milk fat yield [CorrID:32889]</a></div>
+<LI><a href="qtrait?trait_ID=1419"><B>Milk kappa-casein percentage</B></a> (MKCASP): {QTL} Chr.<a href="qdetails?QTL_ID=130534">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk kappa-casein amount</span>; <span class='p'>LPT: milk kappa-casein content</span>; <span class='c'>CMO: milk kappa-casein percentage</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1419&limit=60&vrange=all&species=cattle">Milk kappa-casein percentage [CorrID:39737]</a></div>
+<LI><a href="qtrait?trait_ID=1378"><B>Milk lactose content</B></a> (MLC): {QTL} Chr.<a href="qdetails?QTL_ID=130484">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk lactose amount</span>; <span class='p'>LPT: milk lactose content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1378&limit=60&vrange=all&species=cattle">Milk lactose content [CorrID:39279]</a></div>
+<LI><a href="qtrait?trait_ID=1505"><B>Milk lactose yield</B></a> (LACTYD): {QTL} Chr.<a href="qdetails?QTL_ID=130543">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk lactose amount</span>; <span class='p'>LPT: milk lactose yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1505&limit=60&vrange=all&species=cattle">Milk lactose yield [CorrID:32930]</a></div>
+<LI><a href="qtrait?trait_ID=1251"><B>Milk lauric acid content</B></a> (MFA-C12:0): {QTL} Chr.<a href="qdetails?QTL_ID=130519">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C12:0 amount</span>; <span class='p'>LPT: milk fatty acid C12:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1251&limit=60&vrange=all&species=cattle">Milk lauric acid content [CorrID:40364]</a></div>
+<LI><a href="qtrait?trait_ID=1256"><B>Milk linoleic acid content</B></a> (MFA-C18:2): {QTL} Chr.<a href="qdetails?QTL_ID=130530">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid cis-9,cis-12-C18:2 amount</span>; <span class='p'>LPT: milk fatty acid cis-9,cis-12-C18:2 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1256&limit=60&vrange=all&species=cattle">Milk linoleic acid content [CorrID:48561]</a></div>
+<LI><a href="qtrait?trait_ID=1574"><B>Milk linolenic acid content</B></a> (MFA-C18:3n3): {QTL} Chr.<a href="qdetails?QTL_ID=130531">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C18:3(n-3) amount</span>; <span class='p'>LPT: milk fatty acid C18:3(n-3) content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1574&limit=60&vrange=all&species=cattle">Milk linolenic acid content [CorrID:48559]</a></div>
+<LI><a href="qtrait?trait_ID=1643"><B>Milk margaric acid content</B></a> (MFA-C17:0): {QTL} Chr.<a href="qdetails?QTL_ID=130524">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C17:0 amount</span>; <span class='p'>LPT: milk fatty acid C17:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1643&limit=60&vrange=all&species=cattle">Milk margaric acid content [CorrID:40369]</a></div>
+<LI><a href="qtrait?trait_ID=1252"><B>Milk myristic acid content</B></a> (MFA-C14:0): {QTL} Chr.<a href="qdetails?QTL_ID=130520">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C14:0 amount</span>; <span class='p'>LPT: milk fatty acid C14:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1252&limit=60&vrange=all&species=cattle">Milk myristic acid content [CorrID:40373]</a></div>
+<LI><a href="qtrait?trait_ID=1302"><B>Milk myristoleic acid content</B></a> (MFA-C14:1): {QTL} Chr.<a href="qdetails?QTL_ID=130525">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid cis-9-C14:1 amount</span>; <span class='p'>LPT: milk fatty acid cis-9-C14:1 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1302&limit=60&vrange=all&species=cattle">Milk myristoleic acid content [CorrID:48343]</a></div>
+<LI><a href="qtrait?trait_ID=1255"><B>Milk oleic acid content</B></a> (MFA-C18:1 ): {QTL} Chr.<a href="qdetails?QTL_ID=130527">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid cis-9-C18:1 amount</span>; <span class='p'>LPT: milk fatty acid cis-9-C18:1 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1255&limit=60&vrange=all&species=cattle">Milk oleic acid content [CorrID:40372]</a></div>
+<LI><a href="qtrait?trait_ID=1323"><B>Milk palmitic acid content</B></a> (MFA-C16:0): {QTL} Chr.<a href="qdetails?QTL_ID=130521">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C16:0 amount</span>; <span class='p'>LPT: milk fatty acid C16:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1323&limit=60&vrange=all&species=cattle">Milk palmitic acid content [CorrID:40377]</a></div>
+<LI><a href="qtrait?trait_ID=1301"><B>Milk palmitoleic acid content</B></a> (MFA-C16:1): {QTL} Chr.<a href="qdetails?QTL_ID=130526">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid cis-9-C16:1 amount</span>; <span class='p'>LPT: milk fatty acid cis-9-C16:1 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1301&limit=60&vrange=all&species=cattle">Milk palmitoleic acid content [CorrID:48341]</a></div>
+<LI><a href="qtrait?trait_ID=1326"><B>Milk pentadecylic acid content</B></a> (MFA-C15:0): {QTL} Chr.<a href="qdetails?QTL_ID=130523">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid C15:0 amount</span>; <span class='p'>LPT: milk fatty acid C15:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1326&limit=60&vrange=all&species=cattle">Milk pentadecylic acid content [CorrID:48330]</a></div>
+<LI><a href="qtrait?trait_ID=1615"><B>Milk phosphorus content</B></a> (MPH): {QTL} Chr.<a href="qdetails?QTL_ID=130538">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk phosphorus amount</span>; <span class='p'>LPT: milk phosphorus content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1615&limit=60&vrange=all&species=cattle">Milk phosphorus content [CorrID:39279]</a></div>
+<LI><a href="qtrait?trait_ID=1614"><B>Milk potassium content</B></a> (MK): {QTL} Chr.<a href="qdetails?QTL_ID=130537">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk potassium amount</span>; <span class='p'>LPT: milk potassium content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1614&limit=60&vrange=all&species=cattle">Milk potassium content [CorrID:39282]</a></div>
+<LI><a href="qtrait?trait_ID=1041"><B>Milk protein percentage</B></a> (PP): {QTL} Chr.<a href="qdetails?QTL_ID=130515">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk protein amount</span>; <span class='p'>LPT: milk protein content</span>; <span class='c'>CMO: milk protein percentage</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1041&limit=60&vrange=all&species=cattle">Milk protein percentage [CorrID:32738]</a></div>
+<LI><a href="qtrait?trait_ID=1042"><B>Milk protein yield</B></a> (PY): {QTL} Chr.<a href="qdetails?QTL_ID=130542">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk protein amount</span>; <span class='p'>LPT: milk protein yield</span>; <span class='c'>CMO: milk protein yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1042&limit=60&vrange=all&species=cattle">Milk protein yield [CorrID:32886]</a></div>
+<LI><a href="qtrait?trait_ID=1620"><B>Milk selenium content</B></a> (MSE): {QTL} Chr.<a href="qdetails?QTL_ID=130536">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk selenium amount</span>; <span class='p'>LPT: milk selenium content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1620&limit=60&vrange=all&species=cattle">Milk selenium content [CorrID:39295]</a></div>
+<LI><a href="qtrait?trait_ID=1254"><B>Milk trans-vaccenic acid content</B></a> (MFA-C18:1t): {QTL} Chr.<a href="qdetails?QTL_ID=130529">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk fatty acid trans-11-C18:1 amount</span>; <span class='p'>LPT: milk fatty acid trans-11-C18:1 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1254&limit=60&vrange=all&species=cattle">Milk trans-vaccenic acid content [CorrID:48844]</a></div>
+<LI><a href="qtrait?trait_ID=1573"><B>Milk tridecylic acid content</B></a> (MFA-C13:0): {QTL} Chr.<a href="qdetails?QTL_ID=130522">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='p'>LPT: milk fatty acid C13:0 content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1573&limit=60&vrange=all&species=cattle">Milk tridecylic acid content [CorrID:48331]</a></div>
+<LI><a href="qtrait?trait_ID=1044"><B>Milk yield</B></a> (MY): {QTL} Chr.<a href="qdetails?QTL_ID=130540">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk amount</span>; <span class='c'>CMO: milk yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1044&limit=60&vrange=all&species=cattle">Milk yield [CorrID:31937]</a></div>
+<LI><a href="qtrait?trait_ID=1621"><B>Milk zinc content</B></a> (MZN): {QTL} Chr.<a href="qdetails?QTL_ID=130539">14:611,019-611,020</a>; [REF:<a href="qabstract?PUBMED_ID=26898284">26898284</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk zinc amount</span>; <span class='p'>LPT: milk zinc content</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1621&limit=60&vrange=all&species=cattle">Milk zinc content [CorrID:39283]</a></div>
+
+<LI><B class='g'>DGAT1</B>: Diacylglycerol O-acyltransferase 1 [REF:<a href="qabstract?PUBMED_ID=28819221">28819221</a>]; 
+</UL>
+</TD></TR>
+<TR style='background-color:#f0f0fa'><TD class='l'>rs379166204</TD><TD>
+<UL style='padding:2 10 0 20px'>
+<LI><a href="qtrait?trait_ID=1039"><B>Milk fat yield</B></a> (FY): {QTL} Chr.<a href="qdetails?QTL_ID=156660">14:363,566-611,039</a>; [REF:<a href="qabstract?PUBMED_ID=29751743">29751743</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk total fat amount</span>; <span class='p'>LPT: milk fat yield</span>; <span class='c'>CMO: milk fat yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1039&limit=60&vrange=all&species=cattle">Milk fat yield [CorrID:32889]</a></div>
+
+<LI><B class='g'>DGAT1</B>: Diacylglycerol O-acyltransferase 1 [REF:<a href="qabstract?PUBMED_ID=29751743">29751743</a>]; 
+</UL>
+</TD></TR>
+<TR style='background-color:#f9f9f5'><TD class='l'>rs383288345</TD><TD>
+<UL style='padding:2 10 0 20px'>
+<LI><a href="qtrait?trait_ID=1039"><B>Milk fat yield</B></a> (FY): {QTL} Chr.<a href="qdetails?QTL_ID=156660">14:363,566-611,039</a>; [REF:<a href="qabstract?PUBMED_ID=29751743">29751743</a>] <div style=''><img style='height:14px;margin:4 9 -3 0px;opacity:0.7;background-color:#fff' src='/icons/small/ontology.png'><span class='v'>VT: milk total fat amount</span>; <span class='p'>LPT: milk fat yield</span>; <span class='c'>CMO: milk fat yield</span>; </div>
+
+<div style='color:#355'><img style='margin-bottom:-5px;' src='/icons/small/hand.right.png'> Correlation data exist on this trait: <a href="/cgi-bin/CorrDB/view?tp=tabviw&optrait=1039&limit=60&vrange=all&species=cattle">Milk fat yield [CorrID:32889]</a></div>
+
+<LI><B class='g'>DGAT1</B>: Diacylglycerol O-acyltransferase 1 [REF:<a href="qabstract?PUBMED_ID=29751743">29751743</a>]; 
+</UL>
+</TD></TR>
+</TABLE>
+<div style="margin:3 10 25 10px;">Data found on <span style='font-size:16pt'>&nbsp;5&nbsp;</span> SNPs.</div>
+</td></tr>
+</table> <!-- Most out frame-holder -->
+<P style='padding:40px'>&nbsp;</P> 
+<TABLE border='0' cellpadding='0' cellspacing='0' style="border-top:1px solid #999;width:100%;position:fixed;bottom:0;background-color:#fff">
+<TR><TD style='vertical-align:top;width:72px;padding:3px' rowspan='2'>
+ <a target=new href="/default/copyright.QTLdb.php" onClick="window.open('/default/copyright.QTLdb.php','myWin','toolbar=no,directories=no,location=no,status=no,menubar=no,resizable=yes,scrollbars=yes,left=700,top=80,width=620,height=550'); return false">
+  <img border=0 style='margin:0;height:40px' src="/icons/links/creativecomm.png">
+ </a>
+</TD><TD style='vertical-align:top;padding:4 0 0 3px;text-align:left;color:red;
+         font-family:verdana,helvetica,sans-serif;font-size:0.65em;line-height:1.5em'>
+ &#169; 2003-2025:
+ <a target="_NEW" href="/default/info" style='font-weight:400'>
+ USA &#183; USDA &#183; NRPSP8 &#183; Program to Accelerate Animal Genomics Applications</a>.
+ <nobr>Contact: <a href="#" onclick="submitGiddenForm();return false;">Bioinformatics Team</a></nobr>
+</TD>
+<TD colspan='2' style='vertical-align:bottom;text-align:right;'>
+<div class='inlblk1' style='float:right'><a onMouseOver="Tip('<table><tr><td><img src=/icons/I-call90.gif></td><td valign=top style=font-size:.5em;font-weight:bold;color:#ff1493;>Help<BR>Desk</td></tr></table>', FONTSIZE, '13pt', BGCOLOR, '#ffffff', FADEIN, 400, SHADOW, true, SHADOWCOLOR, '#BDc76B', BORDERWIDTH, 8, BORDERCOLOR, '#87ceff')" onMouseOut="UnTip()" href="#" onclick="submitGiddenForm();return false;"><img style='text-decoration:none;padding:1 20px' src="/icons/general/helpdesk.jpg"></a><BR><img border=0 src="/icons/misc/baseline.jpg"></div>
+</TD></TR>
+</TABLE>
+<form method="post" name='jh9v' action="/bioinfo/services/helpdesk/" id="denForm" style="display:none;">
+    <input type="hidden" name='subj' value='/cgi-bin/QTLdb/BT/srchsnp'>
+</form>
+<script>
+   function submitGiddenForm() {
+      document.getElementById("denForm").submit();
+   }
+</script>
+</BODY></HTML>
