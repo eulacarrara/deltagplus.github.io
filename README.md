@@ -37,7 +37,7 @@
 - Estudos de associação genômica ampla - GWAS (em breve)  
 
 ### * Scripts em R (sem vídeo explicativo)
-- [Buscador de características relacionadas a uma lista de genes no Cattle QTLdb](QTLdb.html)
+- [Buscador de características relacionadas a uma lista de genes ou SNPs no Cattle QTLdb](QTLdb_completo.html)
 - [Resolução das equações de modelos mistos com grupos de pais desconhecidos (UPG)](MME_UPG.html)
   
 ### * Tutoriais e resoluções nos programas BLUPF90 - vídeoaulas no YouTube
