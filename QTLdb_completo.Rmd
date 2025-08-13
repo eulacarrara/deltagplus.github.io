@@ -1,0 +1,148 @@
+---
+title: Buscador de características relacionadas a uma lista de genes ou SNPs no Cattle QTLdb
+author: "Eula Carrara (eulacarrara@gmail.com)"
+date: "11-Aug-2025"
+---
+
+Link para o [CattleQTLdb](https://www.animalgenome.org/cgi-bin/QTLdb/BT/index) 
+  
+Atenção:  
+  
+* Esse script não está otimizado para grandes listas de SNPs e pode demorar vários minutos, dependendo da quantidade de genes/marcadores para buscar.  
+Alguns testes:  
+2 marcadores = 6 segundos.  
+220 marcadores = 11 minutos.  
+  
+* Os genes/SNPs precisam ser filtrados após a pesquisa, porque o QTLdb não retorna apenas o gene exato, ele retorna todos os genes/SNPs que caem na mesma região QTL ou que são considerados relevantes para a busca. Além disso, o parâmetro gwords não faz um “exact match” automático. Ele busca qualquer gene/SNP cujo nome contenha a palavra inserida ou que tenha sinônimos relacionados. 
+
+<br>
+  
+**Pacotes R exigidos:** rvest, dplyr, gdata, DT, stringr, httr  
+
+```{r, echo=TRUE, results='hide', message=FALSE, warning=FALSE}
+pacotes <- c("rvest", "dplyr", "gdata", "DT", "stringr","httr")
+
+for (p in pacotes) {
+  if (!requireNamespace(p, quietly = TRUE)) {
+    install.packages(p)
+  }
+  library(p, character.only = TRUE)
+}
+```
+
+## Busca por características relacionadas a Genes
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+# LISTA DE GENES
+genes <- c("NPFFR2", "DGAT1")
+
+get_traits <- function(gene) {
+  url <- paste0(
+    "https://www.animalgenome.org/cgi-bin/QTLdb/BT/genesrch?gwords=",
+    gene,
+    "&vopt=tcentr&submit=go"
+  )
+  
+  Sys.sleep(2)  # atraso de 2 segundos entre requisições
+  
+  page <- read_html(url)
+  
+  traits <- page %>%
+    html_nodes(xpath = "//td[@class='s' and text()='Trait name:']/following-sibling::td[@class='t']") %>%
+    html_text(trim = TRUE)
+  
+  if (length(traits) == 0) {
+    traits <- NA
+  } else {
+    traits <- paste(traits, collapse = ", ")
+  }
+  
+  data.frame(Gene = gene, Trait = traits, stringsAsFactors = FALSE)
+}
+
+result_genes <- do.call(rbind, lapply(genes, get_traits))
+
+datatable(result_genes, options = list(pageLength = 10),
+          caption = "Características encontradas para os genes pesquisados")
+```
+
+---
+
+## Busca por características relacionadas a SNPs (formato "rs")  
+  
+#### COMO USAR: entre com a lista de SNPs em  [CattleQTLdb](https://www.animalgenome.org/cgi-bin/QTLdb/BT/srchsnp) e clique em GO.  
+#### Clique com o botão direito do mouse na tela e salve o código fonte da página em .html
+####  snps.html é o código fonte da página de resultados.  
+#### O arquivo snps.html pode ser baixado [aqui](snps.html) como exemplo.  
+  
+####  Estou trabalhando para o script fazer a busca também, mas por enquanto essa função está indisponível.  
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+# código fonte dos RESULTADOS
+# SNPs: rs108984194; rs109234250
+html <- read_html("/Users/eulacarrara/Downloads/snps.html")
+
+rows <- html %>% html_elements("tr")
+
+result <- lapply(rows, function(row) {
+  snp <- row %>% html_element("td.l") %>% html_text(trim = TRUE)
+  if (is.na(snp) || !str_detect(snp, "^rs")) return(NULL)
+  
+  traits_html <- row %>% html_elements("li a b")
+  traits <- traits_html %>% html_text()
+  trait_str <- paste(traits, collapse = ", ")
+  
+  gene_html <- row %>% html_element("li b.g")
+  gene <- if (!is.na(gene_html)) html_text(gene_html) else NA_character_
+  
+  data.frame(SNP = snp, TRAIT = trait_str, GENE = gene, stringsAsFactors = FALSE)
+})
+
+result_snps <- do.call(rbind, result)
+result_snps <- result_snps[-1,]
+
+# Tabela interativa no HTML
+datatable(result_snps, options = list(pageLength = 10),
+          caption = "Características e genes encontrados para os SNPs pesquisados e relacionados")
+```
+
+----
+
+## Como converter CHR:POS em SNP com formato "rs"
+
+```{r, echo=TRUE, results='hide', message=FALSE, warning=FALSE}
+pacotes <- c("data.table", "httr", "jsonlite")
+
+for (p in pacotes) {
+  if (!requireNamespace(p, quietly = TRUE)) {
+    install.packages(p)
+  }
+  library(p, character.only = TRUE)
+}
+```
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+
+snps <- data.frame(CHR=c(6, 18), BP=c(36295090, 56106285))
+snps
+
+get_rs_id <- function(chrom, pos) {
+  url <- paste0("https://rest.ensembl.org/overlap/region/bos_taurus/", chrom, ":", pos, "-", pos, "?feature=variation;content-type=application/json")
+  res <- GET(url)
+  if (status_code(res) == 200) {
+    data <- fromJSON(content(res, "text", encoding = "UTF-8"), simplifyVector = FALSE)
+    if (is.list(data) && length(data) > 0) {
+      if (is.list(data[[1]]) && "id" %in% names(data[[1]])) {
+        return(data[[1]]$id)
+      }
+    }
+  }
+  return(NA)
+}
+
+snps$rs <- mapply(get_rs_id, snps$CHR, snps$BP)
+snps <- data.frame(snps)
+
+datatable(snps, options = list(pageLength = 10),
+          caption = "Código rs do SNP com base no CHR:POS")
+```
