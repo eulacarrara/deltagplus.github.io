@@ -24,7 +24,7 @@
 ### * Resoluções à mão - vídeoaulas no YouTube
 - [Modelo animal simples, com um efeito fixo + efeito de animal](https://www.youtube.com/watch?v=-pzh1s1-AqA)
 - [Modelo de repetibilidade](https://www.youtube.com/watch?v=6607tWscA94)
-- Modelo com efeitos maternos (em breve)
+- [Modelo com efeitos maternos](https://youtu.be/p70LMkx5kc4)
 - Modelo animal multicaracteristico (em breve)
 - Modelo de repetibilidade multicaracteristico com efeitos maternos (em breve)
 - Modelo de regressão aleatória e normas de reação (em breve)
