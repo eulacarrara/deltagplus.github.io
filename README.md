@@ -2,7 +2,7 @@
 
 ##### Zootecnia | Melhoramento genético animal  
 
-#### Aulas gratuitas: [Delta G Plus - tutoriais para avaliação genética animal](https://www.youtube.com/@deltagplus)
+#### Aulas gratuitas sobre avaliação genética animal: [Delta G Plus - tutoriais para avaliação genética animal](https://www.youtube.com/@deltagplus)
 
 <br>
 
