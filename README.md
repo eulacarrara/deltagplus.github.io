@@ -14,7 +14,8 @@
   
 <br>
 
-### Árvore genealógica do melhoramento genético animal do Brasil (última att 26-08-2025) --> [Abra aqui, use o zoom!](arvore_v2.html)  
+### Árvore genealógica do melhoramento genético animal do Brasil --> [Abra aqui, use o zoom!](arvore_v2.png)  
+#### (última att 26-08-2025) 
 ### Quer participar? Clique [aqui]([https://forms.gle/YAnxUa829t64c2KJ6](https://forms.gle/RbQc8EZWJCVGuLVR6))! Seu nome será adicionado o mais breve possível :)  
   
 <br>
