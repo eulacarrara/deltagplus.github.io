@@ -15,6 +15,8 @@
 <br>
 
 ### Árvore genealógica do melhoramento genético animal do Brasil --> [Abra aqui, use o zoom!](arvore_v2.png)  
+### Modo interativo --> [Abra aqui, use o zoom!](https://eulacarrara.github.io/arvore_v2.html)  
+  
 ### Quer participar? Clique [aqui](https://forms.gle/RbQc8EZWJCVGuLVR6)!  
 #### Seu nome será adicionado o mais breve possível :) última att 26-08-2025  
   
