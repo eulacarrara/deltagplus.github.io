@@ -1,8 +1,8 @@
-# Eula R. Carrara  
+# Delta G + 
 
-##### Zootecnia | Melhoramento genético animal  
+##### Melhoramento genético animal  
 
-#### Aulas gratuitas sobre avaliação genética animal: [Delta G Plus - tutoriais para avaliação genética animal](https://www.youtube.com/@deltagplus)
+#### Aulas gratuitas sobre avaliação genética animal: [Tutoriais para avaliação genética animal](https://www.youtube.com/@deltagplus)
 
 <br>
 
