@@ -6,8 +6,7 @@
 
 <br>
 
-- Permanent link: [eulacarrara.github.io](https://eulacarrara.github.io)  
-- Github account: [github.com/eulacarrara](https://github.com/eulacarrara/)  
+- Permanent link: [deltagplus.github.io](https://deltagplus.github.io)  
 - Lattes: [lattes.cnpq.br](http://lattes.cnpq.br/5199216087123978)  
 - ResearchGate: [researchgate.net](http://www.researchgate.net/profile/Eula-Carrara)  
 - Linkedin: [linkedin.com](https://www.linkedin.com/in/eulacarrara/)
